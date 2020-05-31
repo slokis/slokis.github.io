@@ -1,28 +1,12 @@
 ---
 layout: post
-title:  "Integrating razorpay into your webapp"
+title:  "我的第一篇文章"
 date:   2019-03-23 21:03:36 +0530
 categories: Javascript NodeJS
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+今天是2020 年的五月31号，很高兴今天学习了利用GitHub+jekyll搭建个人的博客网站。一直忙于百度和实践中，不知不觉时间就过去了。终于在不停摸索中搭建完成了自己的博客网站（虽然网站模板是套用的）。但这只是开始的第一步而已，后面还得继续完善与更新网站。总的来说，是次不错的的体验，毕竟后面的路还很长，有一个自己的博客可以记录和分享开发经验还是挺好的习惯。好了，就到这里，大家下次见！！
 
 ```javascript
-const Razorpay = require('razorpay');
-
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
-
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
+printf("Hello My Blog");
 	})
 ```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
