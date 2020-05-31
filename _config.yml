@@ -2,9 +2,7 @@ title: 洛奇的个人博客
 author: slokis
 email: 2583721977@qq.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  这是一个个人的博客网站，博主目前是一名在校的大学生，学习着软件开发相关技术，网站会不定时更新博客文章，记录并学习相关知识。
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -21,9 +19,9 @@ plainwhite:
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    #twitter: thelehhman
+    github:  slokis
+    #linkedIn: in/thelehhman
     rss: rss
     # dribbble: jekyll
     # flickr:   jekyll
