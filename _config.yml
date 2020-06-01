@@ -50,3 +50,13 @@ theme: plainwhite
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
+
+
+valine_comment:
+  enable: true
+# app_id
+  leancloud_appid: Uc83ft5SkTON6trrsfXsHjqE-gzGzoHsz
+# app_key
+  leancloud_appkey: 1fYLFpMD0Ut7S2RdDNl7ikbm
+# placeholde
+  placeholder: “Just go go"
