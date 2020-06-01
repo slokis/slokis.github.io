@@ -21,8 +21,6 @@ layout: default
   </div>
   {%- if site.plainwhite.disqus_shortname -%}
   <div id="disqus_thread" style="margin-top:25px"></div>
-  {% elsif site.valine_comment.enable %}
-  <div id="vcomments"></div>
   <script>
     var disqus_config = function () {
       this.page.url = '{{ page.url | absolute_url }}';
