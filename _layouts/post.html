@@ -1,6 +1,20 @@
 ---
 layout: default
 ---
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+    owner: 'slokis',
+    repo: 'slokis.github.io',
+    oauth: {
+        client_id: '76c26baeabe67558393c',
+        client_secret: 'ee59ca5f5ebdff37cb0e05029ee177f1c38eff15',
+    },
+});
+gitment.render('gitmentContainer');
+</script>
 {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
 <div class="post-container">
   <a class="post-link" href="{{ page.url | relative_url }}">
