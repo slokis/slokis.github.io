@@ -2,13 +2,14 @@
 layout: post
 title:  "MySQL之多级类别字典表"
 date:   2020-06-01 15:21:36 +0530
-categories: test
+categories: MySQL 字典表
 ---
 最近，在项目实践中遇到了一个多级分类的需求，即产品的字段中有类别字段。在创建数据库时一开始打算创建多个类别字段（大类、中类、小类）和多张类别表对应，可后来一想，如果这样设计的话，产品表中就关联了多张类别表的ID。十分不利于数据维护，效率也十分低下。
 
 这时候，就想到了用一个类别字典表来代替原来的三张类别表，类别字典表中有clothCategory_id（自身ID），clothCategory_categoryNumber（编号），clothCategory_supCategory（父级ID），clothCategory_categoryName（类别名称）
 
 类别字典表设计如图：
+
 ![avatar](/assets/TypeTable.png)
 
 
@@ -16,9 +17,11 @@ categories: test
 
 
 那么，怎么样才能根据一个最下级类别找到它所有的上级类别？
+
 我们只需要一个递归函数来解决：
+
 代码如下：
-```MySQL
+```javascript
 DELIMITER $$
 
 CREATE
@@ -43,7 +46,11 @@ CREATE
 DELIMITER ;
 ```
 创建好了之后，我们只要用
-```SELECT clothCategory_id,clothCategory_categoryName FROM tb_clothcategory WHERE FIND_IN_SET(clothCategory_id,getParentList(14));```
+
+``SELECT clothCategory_id,clothCategory_categoryName FROM tb_clothcategory WHERE FIND_IN_SET(clothCategory_id,getParentList(14));``
+
 来查询，即可获得该ID所有的父级类别（包含自己）
+
 来看看运行后的情况吧：
+
 ![avatar](/assets/TypeTableResult.png)
